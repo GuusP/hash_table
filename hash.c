@@ -6,7 +6,7 @@
 typedef struct T_pos
 { // struct para armazenar as infos da key para printar
     int k;
-    char table;
+    int table;
     int pos;
 } T_pos;
 
