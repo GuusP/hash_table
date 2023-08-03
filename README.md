@@ -1,5 +1,28 @@
 # Hash Table
-Tabela Hash implementada para a disciplina de Algoritmos e Estrutura de Dados 3.
+Tabela Hash implementada para a disciplina de Algoritmos e Estrutura de Dados 3. A implementação foi feita simulando o algoritmo Cuckoo Hash, mas sem o rehashing.
+
+# Execução:
+Execute o makefile para gerar o executável. Com o executável gerado, execute da seguinte forma:
+./myht
+
+## Entrada:
+Para realizar a inclusão ou remoção de um valor:
+    <operação(char)> <valor(int)>
+
+As operações podem ser i (inserir) e r (remover). O programa irá executar enquanto você continuar a entrar um char e um int, um seguido do outro.
+
+## Exemplo:
+    ./myht
+    i 10
+    i 22
+    r 10
+    g g
+
+## Saída:
+A saída será a impressão dos valores na Hash, em qual tabela estão e qual posição da tabela estão.
+
+Para o exemplo acima, a saída seria:
+    22,T1,0
 
 # Enunciado do projeto
 
