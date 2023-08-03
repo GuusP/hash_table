@@ -3,7 +3,7 @@ Tabela Hash implementada para a disciplina de Algoritmos e Estrutura de Dados 3.
 
 # Enunciado do projeto
 
-Tabelas Hash:
+## Tabelas Hash:
 
 O trabalho terá duas tabelas hash de tamanho igual T1 e T2. Assuma tamanho m = 11. A função hash tem a assinatura h(k), onde k é a chave inteira. A primeira tabela T1 possui função hash "h1(k) = k mod m". A segunda tabela T2 possui função hash "h2(k) = ⌊m * (k * 0.9 − ⌊k * 0.9⌋)⌋", onde "⌊ ⌋" significa o arredondamento para inteiro imediatamente menor (i.e., chão) de um valor real. Trataremos colisão movendo chaves entre T1 e T2 ao invés de usar sondagem (e.g., linear ou quadrática). Esse exercício simula o algoritmo de Cuckoo Hash, mas sem nos preocuparmos com rehashing.
 Algoritmo de busca:
@@ -12,12 +12,12 @@ Algoritmo de busca:
     Se a chave k existe em T1, retorna a posição dela em T1 com h1(k).
     Senão, a chave k existe em T2, retorna a posição dela em T2 com h2(k).
 
-Algoritmo de inclusão:
+## Algoritmo de inclusão:
 
     A inclusão deve ser feita sempre em T1: Se a posição calculada por h1(k) estiver vazia ou marcada como "excluída", então insira a chave k.
     Senão, temos colisão em T1 e devemos realizar duas operações:
         considere a chave atual como ki e a nova chave a ser inserida como kj e considere a colisão quando h1(ki) == h1(kj)
-        copiar ki que está em h1(ki) de T1 para T2. O objetivo é permitir inclusão da nova chave kj em T1 sem perder ki na colisão. A chave ki deverá ser incluida em T2 usando h2(ki).
+        copiar ki que está em h1(ki) de T1 para T2. O objetivo é permitir inclusão da nova chave kj em T1 sem perder ki na colisão. A chave ki deverá ser incluida         em T2 usando h2(ki).
         incluir a nova chave kj na posição h1(kj) de T1.
     A estrutura deverá ignorar chaves duplicadas neste caso simplesmente mantendo a primeira chave inserida.
 
